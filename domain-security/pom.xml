@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>security-common</module>
+        <module>security-interfaces</module>
+        <module>security-infrastructure</module>
+        <module>security-domain</module>
+        <module>security-application</module>
+    </modules>
+
+    <parent>
+        <artifactId>base</artifactId>
+        <groupId>com.jsen17</groupId>
+        <version>0.01-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>domain-security</artifactId>
+    <packaging>pom</packaging>
+    <description>安全领域</description>
+
+    <dependencies>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+</project>
