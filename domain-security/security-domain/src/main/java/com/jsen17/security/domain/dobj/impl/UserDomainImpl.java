@@ -1,8 +1,10 @@
 package com.jsen17.security.domain.dobj.impl;
 
 import com.jsen17.security.domain.dobj.UserDomain;
+import com.jsen17.security.domain.po.UserPO;
 import com.jsen17.security.domain.repository.UserRepository;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Flux;
 
 /**
  * 用户领域
@@ -17,5 +19,10 @@ public class UserDomainImpl implements UserDomain {
 
     public UserDomainImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
+    }
+
+    @Override
+    public Flux<UserPO> findAll() {
+        return userRepository.findAll();
     }
 }

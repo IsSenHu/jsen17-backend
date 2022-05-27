@@ -2,9 +2,9 @@ spring:
   application:
     name: domain-security
   r2dbc:
-    url: r2dbcs:mysql://47.96.110.3:3306/domain_security?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
+    url: r2dbcs:mysql://106.52.162.34:3306/domain_security?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
     username: root
-    password: Pfg85191558!
+    password: 521428Slyt!
     pool:
       enabled: true
       initial-size: 10

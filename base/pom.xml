@@ -6,6 +6,7 @@
     <modules>
         <module>support-webflux</module>
         <module>support-r2mysql</module>
+        <module>commons</module>
     </modules>
 
     <parent>
@@ -24,6 +25,7 @@
         <java.version>17</java.version>
         <r2dbc-mysql.version>0.8.2.RELEASE</r2dbc-mysql.version>
         <lombak.version>1.18.22</lombak.version>
+        <guava.version>31.1-jre</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -37,6 +39,12 @@
             <dependency>
                 <groupId>com.jsen17</groupId>
                 <artifactId>support-r2mysql</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jsen17</groupId>
+                <artifactId>commons</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -61,6 +69,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombak.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 

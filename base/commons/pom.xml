@@ -5,31 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>domain-security</artifactId>
+        <artifactId>base</artifactId>
         <groupId>com.jsen17</groupId>
         <version>0.01-SNAPSHOT</version>
     </parent>
 
-    <artifactId>security-application</artifactId>
+    <artifactId>commons</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.jsen17</groupId>
-            <artifactId>security-domain</artifactId>
-            <version>0.01-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jsen17</groupId>
-            <artifactId>security-common</artifactId>
-            <version>0.01-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.jsen17</groupId>
-            <artifactId>commons</artifactId>
-            <version>0.01-SNAPSHOT</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

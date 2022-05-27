@@ -1,25 +1,17 @@
-package com.jsen17.security.domain.po;
+package com.jsen17.security.common.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
+import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * @author HuSen
- * @since 2022/5/27 11:55 AM
+ * @since 2022/5/27 3:12 PM
  */
-@Setter
-@Getter
-@ToString
-@Table(name = "t_user")
-public class UserPO {
+@Data
+public class UserDTO implements Serializable {
 
-    @Id
     private Long id;
 
     private String username;
