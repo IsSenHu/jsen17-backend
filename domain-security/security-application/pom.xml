@@ -14,7 +14,17 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>com.jsen17</groupId>
+            <artifactId>security-domain</artifactId>
+            <version>0.01-SNAPSHOT</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.jsen17</groupId>
+            <artifactId>security-common</artifactId>
+            <version>0.01-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

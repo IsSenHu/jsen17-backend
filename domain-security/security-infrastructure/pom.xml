@@ -14,7 +14,10 @@
     <packaging>jar</packaging>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.jsen17</groupId>
+            <artifactId>support-r2mysql</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

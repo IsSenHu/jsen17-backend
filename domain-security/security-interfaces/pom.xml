@@ -18,6 +18,12 @@
             <groupId>com.jsen17</groupId>
             <artifactId>support-webflux</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.jsen17</groupId>
+            <artifactId>security-application</artifactId>
+            <version>0.01-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
