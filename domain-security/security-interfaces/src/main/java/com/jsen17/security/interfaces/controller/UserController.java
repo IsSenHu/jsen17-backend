@@ -7,7 +7,6 @@ import com.jsen17.security.common.command.CreateUserCommand;
 import com.jsen17.security.common.dto.UserDTO;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -28,13 +27,13 @@ public class UserController {
     }
 
     @GetMapping("/findAll")
-    public Mono<Result<List<UserDTO>>> findAll() {
-        return Mono.just(Result.of(userService.findAll()));
+    public Result<List<UserDTO>> findAll() {
+        return Result.of(userService.findAll());
     }
 
     @PostMapping
-    public Mono<Result<Boolean>> create(@RequestBody CreateUserCommand command) {
+    public Result<Boolean> create(@RequestBody CreateUserCommand command) {
         Assert.isTrue(createUserCommandValidator.check(command), "参数异常");
-        return Mono.just(Result.of(userService.create(command)));
+        return Result.of(userService.create(command));
     }
 }
