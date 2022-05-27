@@ -35,23 +35,6 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     public Boolean create(CreateUserCommand command) {
         UserPO po = BeanCopyUtils.copy(command, new UserPO());
-        if (command.getAccountExpiredTime() == null) {
-            po.setAccountExpiredTime(Constants.SYSTEM_END_TIME);
-        }
-        if (command.getCredentialsExpiredTime() == null) {
-            po.setCredentialsExpiredTime(Constants.SYSTEM_END_TIME);
-        }
-        if (StringUtils.isBlank(command.getUsername())) {
-            po.setUsername(UUIDUtils.uid());
-        }
-        if (StringUtils.isBlank(command.getTelephone())) {
-            po.setTelephone(Constants.TODO);
-        }
-        if (StringUtils.isBlank(command.getEmail())) {
-            po.setEmail(Constants.TODO);
-        }
-        // 设置默认值
-        po.fillingDefaultFieldVal();
         return userDomain.insert(po);
     }
 

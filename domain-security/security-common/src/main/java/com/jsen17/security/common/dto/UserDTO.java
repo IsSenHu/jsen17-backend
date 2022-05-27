@@ -1,16 +1,22 @@
 package com.jsen17.security.common.dto;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.jsen17.commons.constants.Constants;
+import com.jsen17.commons.model.BaseDTO;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * @author HuSen
  * @since 2022/5/27 3:12 PM
  */
-@Data
-public class UserDTO implements Serializable {
+@Setter
+@Getter
+@ToString(callSuper = true)
+public class UserDTO extends BaseDTO {
 
     private Long id;
 
@@ -22,8 +28,10 @@ public class UserDTO implements Serializable {
 
     private String password;
 
+    @JsonFormat(pattern = Constants.Time.F1, timezone = Constants.Time.TIMEZONE_8)
     private LocalDateTime accountExpiredTime;
 
+    @JsonFormat(pattern = Constants.Time.F1, timezone = Constants.Time.TIMEZONE_8)
     private LocalDateTime credentialsExpiredTime;
 
     private Boolean accountNonLocked;

@@ -11,4 +11,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends BaseRepository<UserPO, Long> {
 
+    boolean existsByUsername(String username);
+
+    boolean existsByTelephone(String telephone);
+
+    boolean existsByEmail(String email);
 }
