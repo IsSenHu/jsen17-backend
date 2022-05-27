@@ -1,7 +1,8 @@
 package com.jsen17.security.domain.dobj;
 
 import com.jsen17.security.domain.po.UserPO;
-import reactor.core.publisher.Flux;
+
+import java.util.List;
 
 /**
  * @author HuSen
@@ -9,5 +10,7 @@ import reactor.core.publisher.Flux;
  */
 public interface UserDomain {
 
-    Flux<UserPO> findAll();
+    List<UserPO> findAll();
+
+    Boolean insert(UserPO po);
 }

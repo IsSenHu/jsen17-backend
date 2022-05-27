@@ -4,7 +4,8 @@ import com.jsen17.security.domain.dobj.UserDomain;
 import com.jsen17.security.domain.po.UserPO;
 import com.jsen17.security.domain.repository.UserRepository;
 import org.springframework.stereotype.Component;
-import reactor.core.publisher.Flux;
+
+import java.util.List;
 
 /**
  * 用户领域
@@ -22,7 +23,12 @@ public class UserDomainImpl implements UserDomain {
     }
 
     @Override
-    public Flux<UserPO> findAll() {
+    public List<UserPO> findAll() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public Boolean insert(UserPO po) {
+        return userRepository.save(po).getId() != null;
     }
 }

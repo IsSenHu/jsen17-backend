@@ -7,6 +7,7 @@
         <module>support-webflux</module>
         <module>support-r2mysql</module>
         <module>commons</module>
+        <module>support-jpa</module>
     </modules>
 
     <parent>
@@ -26,6 +27,7 @@
         <r2dbc-mysql.version>0.8.2.RELEASE</r2dbc-mysql.version>
         <lombak.version>1.18.22</lombak.version>
         <guava.version>31.1-jre</guava.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +50,12 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.jsen17</groupId>
+                <artifactId>support-jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!--内部依赖结束-->
 
             <dependency>
@@ -60,6 +68,12 @@
                 <groupId>dev.miku</groupId>
                 <artifactId>r2dbc-mysql</artifactId>
                 <version>${r2dbc-mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -75,6 +89,16 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
         </dependency>
     </dependencies>
 

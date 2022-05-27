@@ -1,6 +1,7 @@
 package com.jsen17.security.infrastructure.repository;
 
-import org.springframework.data.r2dbc.repository.R2dbcRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 
 /**
@@ -8,6 +9,6 @@ import org.springframework.data.repository.NoRepositoryBean;
  * @since 2022/5/27 1:14 PM
  */
 @NoRepositoryBean
-public interface BaseRepository<T, ID> extends R2dbcRepository<T, ID> {
+public interface BaseRepository<T, ID> extends JpaRepository<T, ID>, JpaSpecificationExecutor<T> {
 
 }

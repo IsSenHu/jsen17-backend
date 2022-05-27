@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.jsen17</groupId>
-            <artifactId>support-r2mysql</artifactId>
+            <artifactId>support-jpa</artifactId>
         </dependency>
     </dependencies>
 

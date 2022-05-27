@@ -1,8 +1,7 @@
 package com.jsen17.security.application.service;
 
-import com.jsen17.commons.model.Result;
+import com.jsen17.security.common.command.CreateUserCommand;
 import com.jsen17.security.common.dto.UserDTO;
-import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -12,5 +11,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    Flux<Result<List<UserDTO>>> findAll();
+    List<UserDTO> findAll();
+
+    Boolean create (CreateUserCommand command);
 }

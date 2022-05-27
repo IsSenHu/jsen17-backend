@@ -23,6 +23,11 @@
             <groupId>dev.miku</groupId>
             <artifactId>r2dbc-mysql</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.jsen17</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
