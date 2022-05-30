@@ -25,9 +25,8 @@ public class AccessLogAdvice implements MethodInterceptor {
     @Override
     public Object invoke(@Nonnull MethodInvocation invocation) throws Throwable {
         Method method = invocation.getMethod();
-        Object target = invocation.getThis();
         Object[] args = invocation.getArguments();
         before(method, args);
-        return method.invoke(target, args);
+        return invocation.proceed();
     }
 }
