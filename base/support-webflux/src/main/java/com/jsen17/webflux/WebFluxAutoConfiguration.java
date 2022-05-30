@@ -2,8 +2,10 @@ package com.jsen17.webflux;
 
 import com.jsen17.commons.model.Error;
 import com.jsen17.commons.model.Result;
+import com.jsen17.webflux.utils.ContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -14,6 +16,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @Configuration(proxyBeanMethods = false)
 public class WebFluxAutoConfiguration {
+
+    @Bean
+    public ContextUtils contextUtils() {
+        return new ContextUtils();
+    }
 
     @Slf4j
     @Configuration
