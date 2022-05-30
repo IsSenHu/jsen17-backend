@@ -27,13 +27,14 @@ public class UserController {
         this.createUserCommandValidator = createUserCommandValidator;
     }
 
-    @AccessLog
     @GetMapping("/findAll")
+    @AccessLog(name = "find.all.user")
     public Result<List<UserDTO>> findAll() {
         return Result.of(userService.findAll());
     }
 
     @PostMapping
+    @AccessLog(name = "create.user")
     public Result<Boolean> create(@RequestBody CreateUserCommand command) {
         Assert.isTrue(createUserCommandValidator.check(command), "参数异常");
         return Result.of(userService.create(command));
