@@ -1,7 +1,7 @@
 package com.jsen17.webflux;
 
-import com.jsen17.commons.model.*;
 import com.jsen17.commons.model.Error;
+import com.jsen17.commons.model.*;
 import com.jsen17.webflux.utils.ContextUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;

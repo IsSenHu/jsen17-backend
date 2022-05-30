@@ -5,6 +5,7 @@ import com.jsen17.security.application.service.UserService;
 import com.jsen17.security.application.validator.CreateUserCommandValidator;
 import com.jsen17.security.common.command.CreateUserCommand;
 import com.jsen17.security.common.dto.UserDTO;
+import com.jsen17.webflux.annotation.AccessLog;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +27,7 @@ public class UserController {
         this.createUserCommandValidator = createUserCommandValidator;
     }
 
+    @AccessLog
     @GetMapping("/findAll")
     public Result<List<UserDTO>> findAll() {
         return Result.of(userService.findAll());

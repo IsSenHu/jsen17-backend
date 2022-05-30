@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.jsen17.webflux.WebFluxAutoConfiguration
+  com.jsen17.webflux.WebFluxAutoConfiguration,\
+  com.jsen17.webflux.AccessLogAnnoBeanPostProcessor
