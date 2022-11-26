@@ -25,6 +25,7 @@
         <java.version>17</java.version>
         <guava.version>31.1-jre</guava.version>
         <commons-collections4.version>4.4</commons-collections4.version>
+        <fastjson.version>2.0.19</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +52,12 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
