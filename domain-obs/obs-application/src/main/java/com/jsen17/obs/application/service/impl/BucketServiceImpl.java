@@ -1,6 +1,7 @@
 package com.jsen17.obs.application.service.impl;
 
 import com.jsen17.commons.model.BusinessException;
+import com.jsen17.obs.application.converter.BucketConverter;
 import com.jsen17.obs.application.service.BucketService;
 import com.jsen17.obs.common.dto.BucketDTO;
 import com.jsen17.obs.common.dto.CreateBucketRequest;
@@ -38,6 +39,6 @@ public class BucketServiceImpl implements BucketService {
         BucketPO po = new BucketPO();
         po.setBucket(bucket);
         po.setCreatedTime(LocalDateTime.now());
-        return bucketRepository.save(po).map(p -> new BucketDTO());
+        return bucketRepository.save(po).map(BucketConverter.INSTANCE::poToDto);
     }
 }
