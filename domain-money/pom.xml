@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>obs-application</module>
-        <module>obs-common</module>
-        <module>obs-domain</module>
-        <module>obs-infrastructure</module>
-        <module>obs-interfaces</module>
+        <module>money-common</module>
+        <module>money-domain</module>
+        <module>money-infrastructure</module>
+        <module>money-application</module>
+        <module>money-interfaces</module>
     </modules>
 
     <parent>
@@ -16,8 +16,7 @@
         <groupId>com.jsen17</groupId>
         <version>0.01-SNAPSHOT</version>
     </parent>
-
-    <artifactId>domain-obs</artifactId>
+    <artifactId>domain-money</artifactId>
     <packaging>pom</packaging>
 
     <properties>

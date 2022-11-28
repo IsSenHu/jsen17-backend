@@ -3,7 +3,7 @@ package com.jsen17.security.domain.po;
 import com.jsen17.commons.constants.Constants;
 import com.jsen17.commons.utils.UUIDUtils;
 import com.jsen17.jpa.core.BasePO;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
