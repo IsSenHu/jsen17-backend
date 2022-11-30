@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ssh-agent
+server:
+  port: 8222
